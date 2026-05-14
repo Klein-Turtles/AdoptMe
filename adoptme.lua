@@ -16,7 +16,7 @@ local Tab = Window:CreateTab("Auto Buy Pets", 4483362458)
 -- Section untuk memisahkan daftar pet
 local Section = Tab:CreateSection("Available Pets")
 
--- Fungsi utama untuk nembak remote purchase
+-- Fungsi utama untuk nembak remote purchase (Sudah diperbaiki)
 local function PurchasePet(petID, petName)
     local args = { petID }
     local api = game:GetService("ReplicatedStorage"):WaitForChild("API", 5)
@@ -25,11 +25,11 @@ local function PurchasePet(petID, petName)
         local productAPI = api:WaitForChild("ProductsAPI/PromptProductPurchase", 5)
         if productAPI then
             productAPI:FireServer(unpack(args))
+            -- Bagian Image dihapus supaya tidak error "Icon is not a valid member"
             Rayfield:Notify({
                 Title = "Purchase Sent",
                 Content = "Mencoba membeli: " .. petName,
                 Duration = 3,
-                Image = 4483362458,
             })
         else
             Rayfield:Notify({Title = "Error", Content = "ProductsAPI tidak ditemukan!", Duration = 5})
@@ -55,14 +55,15 @@ Tab:CreateButton({
    end,
 })
 
--- Tombol untuk Cuddly Candle
+-- Tombol untuk Frost Dragon
 Tab:CreateButton({
    Name = "Buy Frost Dragon",
    Callback = function()
        PurchasePet("frost_dragon", "Frost Dragon")
    end,
 })
--- Kamu bisa tambah pet lain di sini nanti
+
+-- Kategori Extra
 Tab:CreateSection("Extra")
 Tab:CreateButton({
    Name = "Destroy UI",
