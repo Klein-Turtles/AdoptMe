@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Adopt Me Pet Shop Tool",
-   LoadingTitle = "Loading Pet Database...",
+   LoadingTitle = "Added Spaniel.",
    LoadingSubtitle = "by Gemini",
    ConfigurationSaving = {
       Enabled = true,
@@ -63,6 +63,13 @@ Tab:CreateButton({
    end,
 })
 
+
+Tab:CreateButton({
+   Name = "Buy Spaniel",
+   Callback = function()
+       PurchasePet("royal_palace_2022_spaniel", "Spaniel")
+   end,
+})
 -- Kategori Extra
 Tab:CreateSection("Extra")
 Tab:CreateButton({
