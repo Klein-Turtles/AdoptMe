@@ -55,6 +55,13 @@ Tab:CreateButton({
    end,
 })
 
+-- Tombol untuk Cuddly Candle
+Tab:CreateButton({
+   Name = "Buy Frost Dragon",
+   Callback = function()
+       PurchasePet("frost_dragon", "Frost Dragon")
+   end,
+})
 -- Kamu bisa tambah pet lain di sini nanti
 Tab:CreateSection("Extra")
 Tab:CreateButton({
