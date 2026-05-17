@@ -79,6 +79,23 @@ Tab:CreateButton({
    end,
 })
 
+-- Tombol untuk Shadow Dragon (BARU)
+Tab:CreateButton({
+   Name = "Buy Candicorn",
+   Callback = function()
+       PurchasePet("sugarfest_2026_candicorn", "Candicorn")
+   end,
+})
+
+-- Tombol untuk Shadow Dragon (BARU)
+Tab:CreateButton({
+   Name = "Buy Haetae",
+   Callback = function()
+       PurchasePet("lunar_2025_haetae", "Haetae")
+   end,
+})
+
+
 -- Kategori Extra
 Tab:CreateSection("Extra")
 Tab:CreateButton({
