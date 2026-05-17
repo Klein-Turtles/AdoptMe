@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Adopt Me Pet Shop Tool",
-   LoadingTitle = "Added Shadow Dragon.",
+   LoadingTitle = "Added Haetae.",
    LoadingSubtitle = "by Gemini v2",
    ConfigurationSaving = {
       Enabled = true,
